@@ -655,10 +655,10 @@ class PropelPDO extends PDO
     function generateCallTrace()
     {
       $stacktrace = debug_backtrace(2);
-      $stackLog = '';
+      $stackLog   = '';
       foreach ($stacktrace as $stack) {
-        $file = isset($stack['file']) ? $stack['file'] : "Unknown file";
-        $line = isset($stack['line']) ? $stack['line'] : "Unknown line";
+        $file     = isset($stack['file']) ? $stack['file'] : "Unknown file";
+        $line     = isset($stack['line']) ? $stack['line'] : "Unknown line";
         $stackLog .= $file.':'.$line.' '.$stack['function']."()\n";
       }
 
